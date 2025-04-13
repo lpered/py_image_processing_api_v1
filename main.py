@@ -8,7 +8,7 @@ import cv2
 import numpy as np
 import boto3
 import time
-from secrets import BUCKET_NAME, BUCKET_ENDPOINT, ACCESS_KEY, SECRET_KEY  
+##from secrets import BUCKET_NAME, BUCKET_ENDPOINT, ACCESS_KEY, SECRET_KEY  
 
 app = FastAPI()
 
