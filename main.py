@@ -8,12 +8,21 @@ import cv2
 import numpy as np
 import boto3
 import time
-##from secrets import BUCKET_NAME, BUCKET_ENDPOINT, ACCESS_KEY, SECRET_KEY  
+import os
+from dotenv import load_dotenv  # Import dotenv to load environment variables
+
+# Load environment variables from .env file
+load_dotenv()
 
 app = FastAPI()
 
+# Retrieve bucket configuration from environment variables
+BUCKET_NAME = os.getenv("BUCKET_NAME")
+BUCKET_ENDPOINT = os.getenv("BUCKET_ENDPOINT")
+ACCESS_KEY = os.getenv("ACCESS_KEY")
+SECRET_KEY = os.getenv("SECRET_KEY")
 
-# Initialize S3 client from idrivee2
+# Initialize S3 client
 s3_client = boto3.client(
     "s3",
     endpoint_url=f"https://{BUCKET_ENDPOINT}",

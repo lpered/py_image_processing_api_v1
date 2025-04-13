@@ -5,3 +5,4 @@ httpx
 opencv-python-headless
 numpy
 boto3
+python-dotenv
