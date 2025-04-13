@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+pillow
+httpx
+opencv-python-headless
+numpy
+boto3
